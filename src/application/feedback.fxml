@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="root" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
+      prefWidth="400" prefHeight="400" stylesheets="@styles.css" fx:controller="application.FeedbackController">
+      
+    <Label text="Leave Your Feedback" layoutX="145" layoutY="23"/>
+    <TextArea fx:id="feedbackTextArea" promptText="Enter your feedback here" wrapText="true"
+              layoutX="50" layoutY="60" prefWidth="300" prefHeight="150"/>
+    <Button text="Submit Feedback" onAction="#submitFeedback" layoutX="180" layoutY="230"/>
+<TableView fx:id="feedbackTableView" layoutX="45" layoutY="280" prefWidth="300" prefHeight="100">
+
+</TableView>
+<Button fx:id="HomeButton" layoutX="100.0" layoutY="230" mnemonicParsing="false" onAction="#GoToHome" text="Home" />
+</Pane>

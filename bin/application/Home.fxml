@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HomeController">
+    <children>
+        <TableView fx:id="busTable" layoutX="36.0" layoutY="150.0" prefHeight="200.0" prefWidth="528.0">
+            <columns>
+                <TableColumn prefWidth="75.0" text="Bus No" fx:id="Busscolumn" />
+                <TableColumn prefWidth="110.0" text="Source" fx:id="fromcolumn" />
+                <TableColumn prefWidth="110.0" text="Destination" fx:id="tocolumn" />
+                <TableColumn prefWidth="75.0" text="Price" fx:id="pricecolumn" />
+                <TableColumn prefWidth="100.0" text="Date" fx:id="datecolumn" />
+                <TableColumn prefWidth="75.0" text="Seats Available" fx:id="seatsAvailableColumn" />
+            </columns>
+        </TableView>
+        <Button layoutX="259.0" layoutY="365.0" mnemonicParsing="false" onAction="#bookBus" text="Book Bus" />
+        <Button fx:id="SupportButton" layoutX="50.0" layoutY="65.0" mnemonicParsing="false" onAction="#Support" text="Customer Support" />
+        <Button fx:id="SearchButton" layoutX="200.0" layoutY="65.0" mnemonicParsing="false" onAction="#Searchbus" text="Search Bus" />
+        <Button fx:id="FeedButton" layoutX="310.0" layoutY="65.0" mnemonicParsing="false" onAction="#Feedbacks" text="Feedback" />
+        <Button fx:id="TripButton" layoutX="410.0" layoutY="65.0" mnemonicParsing="false" onAction="#tripdetail" text="Share Experience" />
+        <Label layoutX="205.0" layoutY="14.0" text="Welcome to Travel With Us">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+    </children>
+</Pane>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="application.CustomerSupportController">
+    <!-- Top section with customer support title -->
+    <top>
+        <HBox spacing="10" alignment="center">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Label text="Customer Support" style="-fx-font-size: 24px;"/>
+        </HBox>
+    </top>
+
+    <!-- Center section with customer inquiry and representative response -->
+    <center>
+        <VBox spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Label text="Customer Inquiry" style="-fx-font-size: 20px;"/>
+            <TextArea fx:id="customerInquiryTextArea" promptText="Customer's inquiry or issue..." prefHeight="100" editable="false"/>
+            
+            <Label text="Representative Response" style="-fx-font-size: 20px;"/>
+            <TextArea fx:id="representativeResponseTextArea" promptText="Type your response here..." prefHeight="100"/>
+
+            <HBox spacing="10">
+                <Button text="Acknowledge" onAction="#handleAcknowledge"/>
+                <Button text="Resolve" onAction="#handleResolve"/>
+                <Button text="Follow Up" onAction="#handleFollowUp"/>
+            </HBox>
+        </VBox>
+    </center>
+
+    <!-- Bottom section with inquiry documentation -->
+    <bottom>
+        <VBox spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Label text="Inquiry Documentation" style="-fx-font-size: 20px;"/>
+            <ListView fx:id="documentationListView" prefHeight="100"/>
+            <HBox spacing="10">
+                <TextField fx:id="documentationTextField" promptText="Document the inquiry here..." />
+                <Button text="Add" onAction="#handleAddDocumentation"/>
+                 <Button fx:id="HomeButton" text="Home" onAction="#GotoHome"/>
+            </HBox>
+        </VBox>
+    </bottom>
+</BorderPane>
